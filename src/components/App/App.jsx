@@ -14,7 +14,8 @@ import { useState, useEffect } from "react";
 export default function App() {
 
     const getInitialContactData = () => {
-    const savedContactsData = localStorage.getItem("contactsData");
+        const savedContactsData = localStorage.getItem("contactsData");
+         console.log("Data from local storage:", savedContactsData);
     return savedContactsData ? JSON.parse(savedContactsData) : []};
     
     
