@@ -30,9 +30,9 @@ export default function App() {
     const [filter, setFilter] = useState("");
 
 
-    const visibleContacts = contacts.filter(contact =>
-        contact.name.toLowerCase().includes(filter.toLowerCase())
-    );
+   const visibleContacts = contacts ? contacts.filter(contact =>
+     contact.name.toLowerCase().includes(filter.toLowerCase())
+ ) : [];
 
      useEffect(()=>{
     localStorage.setItem("contactsData", JSON.stringify(contacts))
