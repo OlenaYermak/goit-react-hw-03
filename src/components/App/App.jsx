@@ -25,8 +25,14 @@ export default function App() {
  const [contacts, setContacts] = useState(getInitialContactData);
 
     
+    // const addContacts = (newContact) => {
+    //     setContacts((prevContacts) => { return [...prevContacts, newContact]; });
+    // };
+
     const addContacts = (newContact) => {
-        setContacts((prevContacts) => { return [...prevContacts, newContact]; });
+        const updatedContacts = [...contacts, newContact];
+        setContacts(updatedContacts);
+        localStorage.setItem("contactsData", JSON.stringify(updatedContacts));
     };
 
        const deleteContacts = (contactId) => {
