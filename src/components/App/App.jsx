@@ -24,10 +24,6 @@ export default function App() {
 
  const [contacts, setContacts] = useState(getInitialContactData);
 
-    
-    // const addContacts = (newContact) => {
-    //     setContacts((prevContacts) => { return [...prevContacts, newContact]; });
-    // };
 
     const addContacts = (newContact) => {
         const updatedContacts = [...contacts, newContact];
